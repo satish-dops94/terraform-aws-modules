@@ -37,7 +37,7 @@ resource "aws_db_instance" "default" {
   max_allocated_storage       = var.max_allocated_storage
   storage_encrypted           = var.storage_encrypted
   kms_key_id                  = var.kms_key_arn
-  // vpc_security_group_ids      = compact(concat(var.associate_security_group_ids))
+  vpc_security_group_ids      = var.vpc_security_group_ids
   ca_cert_identifier          = var.ca_cert_identifier
   db_subnet_group_name        = join("", aws_db_subnet_group.default.*.name)
   parameter_group_name        = var.parameter_group_name

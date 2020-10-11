@@ -25,7 +25,3 @@ output "vpc" {
 output "subnets" {
   value = data.aws_subnet_ids.subnets.*.ids
 }
-
-// output "security_group" {
-//   value = data.aws_security_groups.sg_info.*.ids
-// }

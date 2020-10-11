@@ -5,12 +5,6 @@ variable "region" {
   default     = "ap-south-1"
 }
 
-// variable "enabled" {
-//   type        = bool
-//   default     = true
-//   description = "Set to false to prevent the module from creating any resources"
-// }
-
 variable "db_instance_name"{
   type        = string
   default     = ""
@@ -216,17 +210,11 @@ variable "kms_key_arn" {
   default     = ""
 }
 
-// variable "vpc_security_group_ids" {
-//   type        = list
-//   description = "List of security group id's available in the VPC"
-//   default     = []
-// }
-
-// variable "associate_security_group_ids" {
-//   type        = list(string)
-//   default     = []
-//   description = "The IDs of the existing security groups to associate with the DB instance"
-// }
+variable "vpc_security_group_ids" {
+  type        = list
+  description = "List of security group id's available in the VPC"
+  default     = []
+}
 
 variable "performance_insights_enabled" {
   type        = bool
